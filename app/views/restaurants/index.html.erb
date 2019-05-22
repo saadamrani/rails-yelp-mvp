@@ -1,0 +1,17 @@
+
+<div class="container">
+  <div class="row">
+    <div class="col-12">
+      <div class="d-flex justify-content-between">
+        <h1>Restaurants</h1>
+        <%= link_to "Add", new_restaurant_path %>
+      </div>
+      <% @restaurants.each do |restaurant| %>
+        <h3><%= link_to restaurant.name, restaurant_path(restaurant) %></h3>
+        <p class="m-0"><%= restaurant.address %></p>
+        <p class="m-0"><%= restaurant.phone_number %></p>
+        <p class="m-0"><%= restaurant.category %></p>
+      <% end %>
+    </div>
+  </div>
+</div>
